@@ -1,0 +1,410 @@
+/* ----------------------NORMALIZACION---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/* ----------------------GENERAL---------------------------------------- */
+/* imagen de fondo comun a todos */
+body {
+    background-image: url(../assets/img/salinas-corregida.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* header comun a todos */
+.header-container ul {
+    background: linear-gradient(90deg, rgba(245, 245, 245, 0.555) 0%, rgba(235, 115, 3, 0.596) 80%);
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Antonio', sans-serif;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.pag-item {
+    display: flex;
+}
+
+header ul li {
+    padding: 8px;
+    text-decoration: none;
+    font-family: 'Antonio', sans-serif;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+header ul li:hover {
+    background-color: rgba(255, 0, 0, 0.658);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+header ul li img {
+    width: 64px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+body main img {
+    width: 731px;
+    height: 558px;
+}
+
+.pags {
+    margin: 2px;
+}
+
+/* ------------------------------INDEX----------------------------------- */
+
+/* contenedor general del texto y la imagen del index */
+.media-index-container {
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    overflow-wrap: nowrap;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 0 20px 0;
+}
+
+/* imagen con link para los "eventos" */
+.image-index {
+    min-width: 600px;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    margin-right: auto;
+    overflow: hidden;
+    margin-left: auto;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: orange;
+    padding: 20px;
+}
+
+.text-index {
+    background-color: rgba(23, 47, 63, 0.642);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgba(235, 115, 3, 0.596);
+    font-family: 'Antonio', sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+#title-index {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 768px) {
+    .media-index-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-index {
+        border-color: rgba(235, 115, 3, 0.324);
+    }
+
+    .text-index {
+        color: #000;
+        border-color: rgba(23, 47, 63, 0.642);
+        background-color: rgba(235, 115, 3, 0.596);
+    }
+}
+
+/* --------------------------ADVENTURE---------------------------------- */
+.grid-main-adv {
+    display: grid;
+    overflow-wrap: nowrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.rodadas-list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    flex-grow: 1;
+    overflow: hidden;
+    padding-top: 20px;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px dashed orange;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.rodadas-list li {
+    border: 2px #000 solid;
+    background-color: rgba(245, 245, 245, 0.555);
+    background-position: center;
+}
+.rodadas-list li :hover {
+    background-color: orange;
+    transition: 0.2s;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ruta0 {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 600px;
+    width: 100%;
+    padding-top: 20px;
+    overflow: visible;
+
+}
+
+#title-adventure {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline orange;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-main-adv {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* --------------------------------------GALERIA-------------------------------------- */
+.grid-gallery-container {
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    overflow-wrap: nowrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 0 20px 0;
+}
+
+.media {
+    min-height: 200px;
+    min-width: 400px;
+    padding: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000;
+    box-shadow: orange;
+    border-radius: 10px;
+}
+
+.media .text-gallery {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    color: aliceblue;
+    text-transform: capitalize;
+}
+
+#title-gallery {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-gallery-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .media {
+        border-color: rgba(235, 115, 3, 0.324);
+    }
+}
+
+/* ----------------------LISTA MANTENIMIENTO---------------------------- */
+#title-mant {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grid-mant-container {
+    display: grid;
+    overflow-wrap: nowrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.mant-list li {
+    background-color: rgba(128, 127, 127, 0.295);
+    font-family: 'Fira Sans', sans-serif;
+    text-transform: capitalize;
+    margin: auto;
+}
+
+.mant-list li :hover {
+    background-color: orange;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.mant-descrip {
+    width: 300px;
+    background-color: rgba(128, 127, 127, 0.295);
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Antonio', sans-serif;
+    border-radius: 10px;
+    border: 2px black solid;
+    margin: auto;
+}
+
+.repuestos {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/cadena.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.accesorios {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/exhaust.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.problemas {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/wrench.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.problemas {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/question.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.verif {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/hand.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.docu {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/papeles.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.gear {
+    padding-left: 20px;
+    list-style-type: none;
+    background-image: url(../assets/iconos/casco.png);
+    background-position: 0 0;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 40%;
+    width: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-mant-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* -----------------------------------CONTACTO-------------------------------------- */
+#title-contact {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.form {
+    background-color: rgba(128, 127, 127, 0.295);
+    font-family: 'Antonio', sans-serif;
+    font-weight: bold;
+}
+
+.form ::placeholder {
+    color: rgba(235, 115, 3, 0.596);
+}
+
+@media only screen and (max-width: 768px) {
+    .form {
+        background-color: rgba(23, 47, 63, 0.642);
+        font-family: 'Fira Sans', sans-serif;
+        color: aliceblue;
+    }
+    .reg-cont {
+        color:aliceblue
+    }
+    .form-title {
+        color:aliceblue
+    }
+}
+
+/* -----------------------------------FOOTER----------------------------------------- */
+
+footer {
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+}
