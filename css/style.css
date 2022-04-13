@@ -24,8 +24,8 @@ body {
     background-attachment: fixed;
 }
 
-/* header comun a todos */
-.header-container ul {
+/* navbar */
+.navbar {
     background: linear-gradient(90deg, rgba(245, 245, 245, 0.555) 0%, rgba(235, 115, 3, 0.596) 80%);
     border-radius: 0px 0px 15px 15px;
     font-family: 'Antonio', sans-serif;
@@ -33,39 +33,34 @@ body {
     display: flex;
     align-items: stretch;
     flex-direction: row;
+    transition: 1s;
+}
+.navbar img{
+    width: 64px;
+    height: 42px;
+    border-radius: 10px;
+    padding: 2px;
 }
 
-.pag-item {
-    display: flex;
-}
-
-header ul li {
-    padding: 8px;
-    text-decoration: none;
-    font-family: 'Antonio', sans-serif;
+.navbar-brand:hover {
+    background-color: rgba(255, 0, 0, 0.658);
     border-radius: 10px;
     transition: 1s;
 }
 
-header ul li:hover {
+.navbar-collapse {
+    text-transform: capitalize;
+}
+
+.navbar li:hover {
     background-color: rgba(255, 0, 0, 0.658);
     border-radius: 10px;
     transition: 0.5s;
 }
 
-header ul li img {
-    width: 64px;
-    height: 42px;
-    border-radius: 10px;
-}
-
 body main img {
     width: 731px;
     height: 558px;
-}
-
-.pags {
-    margin: 2px;
 }
 
 /* ------------------------------INDEX----------------------------------- */
@@ -171,6 +166,7 @@ body main img {
 }
 
 .rodadas-list {
+    background-color: rgba(23, 47, 63, 0.642);
     display: flex;
     flex-direction: column;
     flex-basis: auto;
@@ -186,13 +182,17 @@ body main img {
     padding: 5px;
 }
 
+.rodadas-list h3 {
+    color: aliceblue;
+}
+
 .rodadas-list li {
     border: 2px #000 solid;
     background-color: rgba(245, 245, 245, 0.555);
     background-position: center;
 }
 .rodadas-list li :hover {
-    background-color: orange;
+    background-color: rgb(255, 0, 0, 0.658);
     transition: 0.2s;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -271,6 +271,12 @@ body main img {
     }
 }
 
+#carouselExampleCaptions {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
 /* ----------------------LISTA MANTENIMIENTO---------------------------- */
 #title-mant {
     text-align: center;
@@ -288,27 +294,28 @@ body main img {
 }
 
 .mant-list li {
-    background-color: rgba(128, 127, 127, 0.295);
+    background-color: rgba(23, 47, 63, 0.642);
     font-family: 'Fira Sans', sans-serif;
     text-transform: capitalize;
     margin: auto;
 }
 
 .mant-list li :hover {
-    background-color: orange;
+    background-color: rgb(255, 0, 0, 0.658);
     transition: 0.2s;
     font-weight: bold;
 }
 
 .mant-descrip {
     width: 300px;
-    background-color: rgba(128, 127, 127, 0.295);
+    background-color: rgba(23, 47, 63, 0.642);
     align-items: center;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: 'Antonio', sans-serif;
+    color: aliceblue;
     border-radius: 10px;
     border: 2px black solid;
     margin: auto;
@@ -324,6 +331,10 @@ body main img {
     width: 250px;
 }
 
+.repuestos a {
+    color: aliceblue;
+}
+
 .accesorios {
     padding-left: 20px;
     list-style-type: none;
@@ -335,15 +346,8 @@ body main img {
     width: 250px;
 }
 
-.problemas {
-    padding-left: 20px;
-    list-style-type: none;
-    background-image: url(../assets/iconos/wrench.png);
-    background-position: 0 0;
-    background-size: 16px;
-    background-repeat: no-repeat;
-    margin-left: 40%;
-    width: 250px;
+.accesorios a {
+    color: aliceblue;
 }
 
 .problemas {
@@ -355,6 +359,9 @@ body main img {
     background-repeat: no-repeat;
     margin-left: 40%;
     width: 250px;
+}
+.problemas a {
+    color: aliceblue;
 }
 
 .verif {
@@ -368,6 +375,10 @@ body main img {
     width: 250px;
 }
 
+.verif a {
+    color: aliceblue;
+}
+
 .docu {
     padding-left: 20px;
     list-style-type: none;
@@ -377,6 +388,9 @@ body main img {
     background-repeat: no-repeat;
     margin-left: 40%;
     width: 250px;
+}
+.docu a {
+    color: aliceblue;
 }
 
 .gear {
@@ -388,6 +402,10 @@ body main img {
     background-repeat: no-repeat;
     margin-left: 40%;
     width: 250px;
+}
+
+.gear a {
+    color: aliceblue;
 }
 
 @media only screen and (max-width: 768px) {
@@ -433,5 +451,8 @@ footer {
     right: 0;
     left: 0;
     bottom: 0;
-    padding: 10px;
+    background: linear-gradient(90deg, rgba(245, 245, 245, 0.555) 0%, rgba(235, 115, 3, 0.596) 80%);
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Antonio', sans-serif;
+    color:aliceblue;
 }
