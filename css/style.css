@@ -95,6 +95,8 @@ body main img {
     border: 2px solid #000;
     box-shadow: orange;
     padding: 20px;
+    animation-duration: 5s;
+    animation-name: slideimage;
 }
 
 .text-index {
@@ -108,6 +110,19 @@ body main img {
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 10px;
+    animation-duration: 5s;
+    animation-name: slidetext;
+}
+
+@keyframes slidetext {
+    from {
+        margin-left: 100%;
+        width: 300%;
+        } 
+       to {
+            margin-left: 0%;
+            width: 100%;
+        }
 }
 
 #title-index {
@@ -124,12 +139,24 @@ body main img {
     .image-index {
         border-color: rgba(235, 115, 3, 0.324);
     }
+    
 
     .text-index {
         color: #000;
         border-color: rgba(23, 47, 63, 0.642);
         background-color: rgba(235, 115, 3, 0.596);
     }
+}
+
+@keyframes slideimage {
+    from {
+        margin-right: 100%;
+        width: 150%;
+        } 
+       to {
+            margin-right: 0%;
+            width: 100%;
+        }
 }
 
 /* --------------------------ADVENTURE---------------------------------- */
