@@ -1,144 +1,4 @@
-/* ----------------------NORMALIZACION---------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-a:link,
-a:visited,
-a:active {
-    text-decoration: none;
-    color: black;
-}
-/* ----------------------GENERAL---------------------------------------- */
-/* imagen de fondo comun a todos */
-body {
-    background-image: url(../assets/img/optica-husky.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-/* navbar */
-.navbar {
-    background: linear-gradient(90deg, rgb(235, 115, 3) 30%, rgb(0, 0, 0) 70%);
-    border-radius: 0px 0px 15px 15px;
-    font-family: 'Antonio', sans-serif;
-    padding: 10px;
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-    transition: 1s;
-}
-.navbar img {
-    width: 64px;
-    height: 42px;
-    border-radius: 10px;
-    padding: 2px;
-}
-.navbar-brand:hover {
-    background-color: black;
-    border-radius: 10px;
-    transition: 1s;
-}
-.navbar-collapse {
-    text-transform: capitalize;
-}
-.navbar li:hover {
-    background-color: black;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-/* ---------------------------------BURGUESITA COLORIDA---------------------------- */
-.custom-toggler.navbar-toggler {
-    border-color: rgb(255, 255, 255);
-}
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(235, 115, 3, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-/* ------------------------------INDEX----------------------------------- */
-/* contenedor general del texto y la imagen del index */
-.media-index-container {
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    overflow-wrap: nowrap;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 20px 0 20px 0;
-}
-/* imagen con link para los "eventos" */
-.image-index {
-    min-width: 400px;
-    min-height: 400px;
-    background-size: cover;
-    background-position: center;
-    margin-right: auto;
-    overflow: hidden;
-    margin-left: auto;
-    border-radius: 10px;
-    border: 2px solid #000;
-    box-shadow: orange;
-    padding: 20px;
-    animation-duration: 5s;
-    animation-name: slideimage;
-}
-.text-index {
-    background-color: rgba(23, 47, 63, 0.642);
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: rgba(235, 115, 3, 0.596);
-    font-family: 'Antonio', sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    animation-duration: 5s;
-    animation-name: slidetext;
-}
-@keyframes slidetext {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-#title-index {
-    color: rgb(235, 115, 3);
-    text-align: center;
-    text-transform: capitalize;
-}
-@media only screen and (max-width: 768px) {
-    .media-index-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .image-index {
-        border-color: rgba(235, 115, 3, 0.324);
-    }
-    .text-index {
-        color: #000;
-        border-color: rgba(23, 47, 63, 0.642);
-        background-color: rgba(235, 115, 3, 0.596);
-    }
-}
-@keyframes slideimage {
-    from {
-        margin-right: 100%;
-        width: 150%;
-    }
-    to {
-        margin-right: 0%;
-        width: 100%;
-    }
-}
+/* NORMALIZACION, NAV, FOOTER E INDEX EN SASS */
 /* --------------------------ADVENTURE---------------------------------- */
 .grid-main-adv {
     display: grid;
@@ -170,7 +30,7 @@ body {
 }
 .rodadas-list li {
     border: 2px #000 solid;
-    background-color: rgba(245, 245, 245, 0.555);
+    background-color: rgba(237, 237, 237, 0.768);
     background-position: center;
     border-radius: 10px;
 }
@@ -189,14 +49,13 @@ body {
     width: 100%;
     padding-top: 20px;
     overflow: visible;
-    background-color: rgba(237, 237, 237, 0.278);
+    background-color: rgba(237, 237, 237, 0.768);
     border-radius: 10px;
 }
 #title-adventure {
     color: rgb(235, 115, 3);
     text-align: center;
     text-transform: capitalize;
-    text-decoration: underline rgb(235, 115, 3);
 }
 @media only screen and (max-width: 768px) {
     .grid-main-adv {
@@ -213,7 +72,7 @@ body {
     gap: 12px;
     padding: 2px;
     overflow-x: scroll;
-    border: 2px solid rgba(235, 115, 3, 0.324);
+    border: 2px solid rgba(235, 115, 3, 0.596);
     border-radius: 10px;
     padding: 10px;
 }
@@ -263,6 +122,15 @@ body {
     text-align: center;
     text-transform: capitalize;
 }
+@media only screen and (max-width: 768px) {
+    .grid-gallery-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .media {
+        border-color: rgba(235, 115, 3, 0.324);
+    }
+}
 .aside-gallery {
     background-color: rgba(23, 47, 63, 0.642);
 }
@@ -274,18 +142,6 @@ body {
 .carousel-inner {
     max-height: 480px;
     border-radius: 10px;
-}
-@media only screen and (max-width: 768px) {
-    .grid-gallery-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .media {
-        border-color: rgba(235, 115, 3, 0.324);
-    }
-    .carousel-inner {
-        max-height: 320px;
-    }
 }
 /* ----------------------LISTA MANTENIMIENTO---------------------------- */
 #title-mant {
@@ -420,6 +276,7 @@ body {
     color: aliceblue;
 }
 .form {
+    
     color: rgba(235, 115, 3, 0.596);
     font-family: 'Antonio', sans-serif;
     font-weight: bold;
@@ -440,15 +297,4 @@ body {
         font-family: 'Fira Sans', sans-serif;
         color: aliceblue;
     }
-}
-/* -----------------------------------FOOTER----------------------------------------- */
-footer {
-    text-align: center;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 30%, rgb(235, 115, 3) 70%);
-    border-radius: 0px 0px 15px 15px;
-    font-family: 'Antonio', sans-serif;
-    color: aliceblue;
 }

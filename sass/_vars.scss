@@ -1,0 +1,18 @@
+$colors: (
+    blueBg: rgba(23, 47, 63, 0.642),
+    orangeBg: rgba(235, 115, 3, 0.596),
+    greyBg: rgba(237, 237, 237, 0.768),
+    redHover: rgba(255, 0, 0, 0.658),
+    whiteFont: rgb(240, 248, 255),
+    orangeNav: rgb(235, 115, 3),
+    blackFont: rgb(0, 0, 0));
+
+$gradiente: (cool: linear-gradient(90deg, rgb(235, 115, 3) 30%, rgb(0, 0, 0) 70%));
+
+$borderRadius: 10px;
+
+@mixin titles {
+    color: map-get($colors, orangeNav );
+    text-align: center;
+    text-transform: capitalize;
+}

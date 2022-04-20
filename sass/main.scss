@@ -1,0 +1,162 @@
+@import 'normalize';
+@import 'vars';
+
+
+#body-gral {
+    background-image: url(../assets/img/optica-husky.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* navbar */
+.navbar {
+    background: map-get($gradiente, cool);
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Antonio', sans-serif;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    transition: 1s;
+
+    img {
+        width: 64px;
+        height: 42px;
+        border-radius: $borderRadius;
+        padding: 2px;
+    }
+
+    & &-brand:hover {
+        background-color: map-get($colors, blackFont);
+        border-radius: $borderRadius;
+        transition: 1s;
+    }
+
+    & &-collapse {
+        text-transform: capitalize;
+    }
+
+    & a:hover {
+        background-color: map-get($colors, blackFont);
+        border-radius: $borderRadius;
+        transition: 1s;
+    }
+
+    .custom-toggler.navbar-toggler {
+        border-color: map-get($colors, whiteFont);
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(235, 115, 3, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+
+/* main */
+
+main {
+    & #title-gral {
+        @include titles()
+    }
+
+    .media-index-container {
+        min-height: 100vh;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        overflow-wrap: nowrap;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px 0 20px 0;
+
+        & .image-index {
+            min-width: 400px;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            margin-right: auto;
+            overflow: hidden;
+            margin-left: auto;
+            border-radius: 10px;
+            border: 2px solid map-get($colors, greyBg);
+            box-shadow: map-get($colors, orangeNav);
+            padding: 20px;
+            animation-duration: 5s;
+            animation-name: slideimage;
+        }
+
+        & .text-index {
+            padding: 20px;
+            text-align: center;
+            background-color: map-get($colors, blueBg);
+            max-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: map-get($colors, orangeBg);
+            font-family: 'Antonio', sans-serif;
+            font-size: 16px;
+            border: 2px solid map-get($colors, greyBg);
+            border-radius: 10px;
+            animation-duration: 5s;
+            animation-name: slidetext;
+        }
+
+        
+        @keyframes slidetext {
+            from {
+                margin-left: 50%;
+                width: 300%;
+            }
+            
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        @keyframes slideimage {
+            from {
+                margin-right: 100%;
+                width: 50%;
+            }
+
+            to {
+                margin-right: 0%;
+                width: 100%;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .media-index-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-index-container .image-index {
+            border-color: map-get($colors, orangeBg);
+            animation-duration:2s;
+        }
+
+        .media-index-container .text-index {
+            color: map-get($colors, whiteFont);
+            border: 2px solid map-get($colors, blackFont);
+            background-color: map-get($colors, orangeBg);
+            animation-duration:2s;
+        }
+
+    }
+}
+/* footer */
+
+footer {
+    font-family: 'Antonio', sans-serif;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: map-get($gradiente, cool);
+    border-radius: 0px 0px 15px 15px;
+    color: map-get($colors, whiteFont);
+}
