@@ -3,27 +3,26 @@
 .grid-main-adv {
     display: grid;
     overflow-wrap: nowrap;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: auto;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: auto;
 }
 .rodadas-list {
-    background-color: rgba(23, 47, 63, 0.642);
     display: flex;
     flex-direction: column;
     flex-basis: auto;
     flex-grow: 1;
     overflow: hidden;
-    padding-top: 20px;
     align-items: center;
+    padding-top: 20px;
     font-size: 40px;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    background-color: rgba(23, 47, 63, 0.642);
     border: 2px solid rgba(235, 115, 3, 0.324);
     border-radius: 10px;
-    padding: 5px;
 }
 .rodadas-list h3 {
     color: aliceblue;
@@ -47,7 +46,6 @@
     flex-direction: column;
     height: 480px;
     width: 100%;
-    padding-top: 20px;
     overflow: visible;
     background-color: rgba(237, 237, 237, 0.768);
     border-radius: 10px;
@@ -86,8 +84,10 @@
     width: 100%;
     margin: auto;
     display: grid;
+    justify-content: center;
     overflow-wrap: nowrap;
-    grid-template-columns: repeat(3, 1fr);    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);    
+    gap: 10px;
     padding: 20px 0 20px 0;
 }
 .media {
@@ -273,13 +273,16 @@
 }
 .main-contact {
     background-color: rgba(23, 47, 63, 0.642);
+    border-radius: 10px;
     color: aliceblue;
+    text-align: center;
 }
 .form {
-    
     color: rgba(235, 115, 3, 0.596);
     font-family: 'Antonio', sans-serif;
     font-weight: bold;
+    text-align: center;
+    padding: 10px;
 }
 .form ::placeholder {
     color: rgba(235, 115, 3, 0.596);

@@ -39,8 +39,10 @@ a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-transition: 1s;
-  transition: 1s;
+}
+
+.navbar .container-fluid {
+  margin-left: 7%;
 }
 
 .navbar img {
@@ -48,6 +50,10 @@ a:active {
   height: 42px;
   border-radius: 10px;
   padding: 2px;
+}
+
+.navbar .nav-item {
+  margin-left: 5%;
 }
 
 .navbar .navbar-brand:hover {
@@ -77,6 +83,10 @@ a:active {
 }
 
 /* main */
+main {
+  margin: 7.5%;
+}
+
 main #title-gral {
   color: #eb7303;
   text-align: center;
@@ -84,26 +94,38 @@ main #title-gral {
 }
 
 main .media-index-container {
-  min-height: 100vh;
-  width: 100%;
-  margin: auto;
   display: -ms-grid;
   display: grid;
   overflow-wrap: nowrap;
+  min-height: 100%;
+  width: 100%;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 20px 0 20px 0;
+  margin: auto;
 }
 
 main .media-index-container .image-index {
-  min-width: 400px;
-  min-height: 400px;
+  height: 400px;
+  width: auto;
   background-size: cover;
   background-position: center;
-  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   overflow: hidden;
-  margin-left: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 10px;
   border: 2px solid rgba(237, 237, 237, 0.768);
   -webkit-box-shadow: #eb7303;
@@ -116,10 +138,6 @@ main .media-index-container .image-index {
 }
 
 main .media-index-container .text-index {
-  padding: 20px;
-  text-align: center;
-  background-color: rgba(23, 47, 63, 0.642);
-  max-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,12 +145,19 @@ main .media-index-container .text-index {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: rgba(235, 115, 3, 0.596);
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Antonio', sans-serif;
   font-size: 16px;
+  color: rgba(235, 115, 3, 0.596);
+  background-color: rgba(23, 47, 63, 0.642);
   border: 2px solid rgba(237, 237, 237, 0.768);
   border-radius: 10px;
   -webkit-animation-duration: 5s;
@@ -166,7 +191,7 @@ main .media-index-container .text-index {
 @-webkit-keyframes slideimage {
   from {
     margin-right: 100%;
-    width: 50%;
+    width: 300%;
   }
   to {
     margin-right: 0%;
@@ -177,7 +202,7 @@ main .media-index-container .text-index {
 @keyframes slideimage {
   from {
     margin-right: 100%;
-    width: 50%;
+    width: 300%;
   }
   to {
     margin-right: 0%;
@@ -210,7 +235,8 @@ main .media-index-container .text-index {
 }
 
 /* footer */
-footer {
+#body-gral footer {
+  position: relative;
   font-family: 'Antonio', sans-serif;
   text-align: center;
   right: 0;
