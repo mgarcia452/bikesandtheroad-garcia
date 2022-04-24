@@ -1,0 +1,46 @@
+.main-contact {
+    margin: $marginstd;
+    background-color: map-get($colors, blueBg);
+    border-radius: $borderRadius;
+    color: map-get($colors, whiteFont);
+    text-align: center;
+
+    & .form {
+        color: map-get($colors, orangeNav);
+        font-family: 'Antonio', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        padding: $borderRadius;
+
+        & ::placeholder {
+            color: map-get($colors, orangeBg);
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .reg-cont {
+            color: map-get($colors, orangeBg);
+        }
+
+        .form-title {
+            color: map-get($colors, orangeBg);
+        }
+
+        .form {
+            font-family: 'Fira Sans', sans-serif;
+            color: map-get($colors, whiteFont);
+        }
+    }
+
+    .submit-btn {
+        width: 6.25rem;
+        border: none;
+        background-color: map-get($colors, greyBg);
+        border-radius: 1.25rem;
+        font-weight: bold;
+    }
+
+    fieldset button:hover {
+        color: map-get($colors, orangeNav);
+    }
+}

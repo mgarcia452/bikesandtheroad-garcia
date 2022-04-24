@@ -8,7 +8,7 @@ $colors: (
     blackFont: rgb(0, 0, 0));
 
 $gradiente: (cool: linear-gradient(90deg, rgb(235, 115, 3) 30%, rgb(0, 0, 0) 70%));
-
+$marginstd: 2% 15% 2% 15%;
 $borderRadius: 10px;
 
 @mixin titles {

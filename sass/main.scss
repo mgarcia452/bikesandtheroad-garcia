@@ -1,5 +1,9 @@
 @import 'normalize';
 @import 'vars';
+@import 'contacto';
+@import 'galeria';
+@import 'mantenimiento';
+@import 'adventure';
 
 #body-gral {
     background-image: url(../assets/img/optica-husky.jpg);
@@ -62,8 +66,7 @@
 /* main */
 
 main {
-    margin: 7.5%;
-
+    margin: 2% 10% 2% 10%;
     & #title-gral {
         @include titles()
     }

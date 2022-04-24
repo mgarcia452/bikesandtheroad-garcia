@@ -1,0 +1,133 @@
+.grid-mant-container {
+    display: grid;
+    overflow-wrap: nowrap;
+    gap: 20px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    .mant-descrip {
+        width: 300px;
+        background-color: map-get($colors, blueBg);
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Antonio', sans-serif;
+        color: map-get($colors, whiteFont);
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: map-get($colors, whiteFont);
+        margin: auto;
+    }
+
+
+    .mant-list li {
+        background-color: map-get($colors, blueBg);
+        font-family: 'Fira Sans', sans-serif;
+        text-transform: capitalize;
+        margin: auto;
+    }
+
+    li :hover {
+        background-color: map-get($colors, orangeNav);
+        transition: 0.2s;
+        font-weight: bold;
+    }
+
+    .repuestos {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/cadena.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .repuestos a {
+        color: map-get($colors, whiteFont);
+    }
+    
+    .accesorios {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/exhaust.png);
+        background-position: 0 0;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .accesorios a {
+        color: map-get($colors, whiteFont);
+    }
+    
+    .problemas {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/question.png);
+        background-position: 0 0;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .problemas a {
+        color: map-get($colors, whiteFont);
+    }
+    
+    .verif {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/hand.png);
+        background-position: 0 0;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .verif a {
+        color: map-get($colors, whiteFont);
+    }
+    
+    .docu {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/papeles.png);
+        background-position: 0 0;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .docu a {
+        color: map-get($colors, whiteFont);
+    }
+    
+    .gear {
+        padding-left: 20px;
+        list-style-type: none;
+        background-image: url(../assets/iconos/casco.png);
+        background-position: 0 0;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+        width: 250px;
+    }
+    
+    .gear a {
+        color: map-get($colors, whiteFont);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .grid-mant-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

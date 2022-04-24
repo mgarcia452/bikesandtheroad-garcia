@@ -1,0 +1,79 @@
+.grid-main-adv {
+    display: grid;
+    overflow-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: $borderRadius;
+    margin: auto;
+
+    .rodadas-list {
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-grow: 1;
+        overflow: hidden;
+        align-items: center;
+        padding-top: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: map-get($colors, blueBg);
+        border: 2px solid map-get($colors, orangeBg);
+
+        h3 {
+            color: map-get($colors, whiteFont);
+        }
+
+        li {
+            border: 2px map-get($colors, blackFont);
+            background-color: map-get($colors, greyBg);
+            background-position: center;
+            border-radius: $borderRadius;
+        }
+
+        li :hover {
+            background-color: map-get($colors, redHover);
+            transition: 0.2s;
+            font-family: 'Fira Sans', sans-serif;
+            border-radius: $borderRadius;
+        }
+    }
+
+    .ruta0 {
+        display: flex;
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-direction: column;
+        height: 480px;
+        width: 100%;
+        overflow: visible;
+        background-color: map-get($colors, greyBg);
+        border-radius: $borderRadius;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-main-adv {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.iframes-adv {
+    margin: 2% 5% 2% 5%;
+    width: 90%;
+    display: flex;
+    max-height: 495px;
+    background-color: map-get($colors, blackFont);
+    gap: 12px;
+    padding: 2px;
+    overflow-x: scroll;
+    border: 2px solid map-get($colors, orangeBg);
+    padding: $borderRadius;
+
+    .iframe-item {
+        border: solid map-get($colors, blueBg);
+        border-radius: $borderRadius;
+    }
+}
