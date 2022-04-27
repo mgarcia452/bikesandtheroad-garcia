@@ -39,6 +39,7 @@
         border: 2px solid map-get($colors, blackFont);
         background-color: map-get($colors, orangeBg);
         max-width: 80%;
+        min-width: 320px;
         
         #title-gral {
             color: map-get($colors, whiteFont);

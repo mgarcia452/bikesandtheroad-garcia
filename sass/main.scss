@@ -22,6 +22,7 @@
     display: flex;
     align-items: stretch;
     flex-direction: row;
+    min-width: 320px;
 
     .container-fluid {
         margin-left: 7%;
@@ -65,20 +66,20 @@
 
 /* main */
 
-main {
-    & #title-gral {
-        @include titles()
-    }
 
+main {
     margin: 2% 10% 2% 10%;
     min-height: 100vh;
+
+    #title-gral {
+        @include titles()
+    }
 
     .media-index-container {
         display: grid;
         width: 100%;
         gap: 10px;
         margin: auto;
-        padding-top: 10%;
 
         & .image-index {
             height: 480px;
@@ -93,7 +94,7 @@ main {
             align-items: center;
             border-radius: 10px;
             border: 1px solid map-get($colors, greyBg);
-            animation-duration: 5s;
+            animation-duration: 3s;
             animation-name: slideimage;
         }
 
@@ -111,7 +112,7 @@ main {
             background-color: map-get($colors, blueBg);
             border: 1px solid map-get($colors, greyBg);
             border-radius: 10px;
-            animation-duration: 5s;
+            animation-duration: 3s;
             animation-name: slidetext;
         }
 
@@ -172,4 +173,13 @@ footer {
     background: map-get($gradiente, cool);
     border-radius: 0px 0px 15px 15px;
     color: map-get($colors, whiteFont);
+    text-transform: uppercase;
+    
+    a svg {
+        margin-bottom: 1.5%;
+    }
+}
+.inner-foot {
+    text-transform: lowercase;
+    font-size: 12px;
 }
