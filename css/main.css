@@ -136,6 +136,10 @@ a:active {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .grid-gallery-container .zoom:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
   .grid-gallery-container .media {
     border-color: rgba(235, 115, 3, 0.596);
   }
@@ -189,57 +193,35 @@ a:active {
   font-weight: bold;
 }
 
-.grid-mant-container .mant-list ul .repuestos {
-  background-image: url(../assets/iconos/cadena.png);
+.grid-mant-container .mant-list ul .repuestos, .grid-mant-container .mant-list ul .accesorios, .grid-mant-container .mant-list ul .problemas, .grid-mant-container .mant-list ul .verif, .grid-mant-container .mant-list ul .docu, .grid-mant-container .mant-list ul .gear {
   padding-left: 20px;
   background-size: 16px;
   background-repeat: no-repeat;
   width: 250px;
+}
+
+.grid-mant-container .mant-list ul .repuestos {
+  background-image: url(../assets/iconos/cadena.png);
 }
 
 .grid-mant-container .mant-list ul .accesorios {
   background-image: url(../assets/iconos/exhaust.png);
-  padding-left: 20px;
-  background-position: 0 0;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  width: 250px;
 }
 
 .grid-mant-container .mant-list ul .problemas {
   background-image: url(../assets/iconos/question.png);
-  padding-left: 20px;
-  background-position: 0 0;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  width: 250px;
 }
 
 .grid-mant-container .mant-list ul .verif {
   background-image: url(../assets/iconos/hand.png);
-  padding-left: 20px;
-  background-position: 0 0;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  width: 250px;
 }
 
 .grid-mant-container .mant-list ul .docu {
   background-image: url(../assets/iconos/papeles.png);
-  padding-left: 20px;
-  background-position: 0 0;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  width: 250px;
 }
 
 .grid-mant-container .mant-list ul .gear {
   background-image: url(../assets/iconos/casco.png);
-  padding-left: 20px;
-  background-position: 0 0;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  width: 250px;
 }
 
 @media only screen and (max-width: 768px) {

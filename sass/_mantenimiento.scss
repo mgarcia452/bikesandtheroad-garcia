@@ -36,57 +36,41 @@
                 font-weight: bold;
             }
 
-            .repuestos {
-                background-image: url(../assets/iconos/cadena.png);
+            %list-gral {
                 padding-left: 20px;
                 background-size: 16px;
                 background-repeat: no-repeat;
                 width: 250px;
+            }
+
+            .repuestos {
+                @extend %list-gral;
+                background-image: url(../assets/iconos/cadena.png);
             }
 
             .accesorios {
+                @extend %list-gral;
                 background-image: url(../assets/iconos/exhaust.png);
-                padding-left: 20px;
-                background-position: 0 0;
-                background-size: 16px;
-                background-repeat: no-repeat;
-                width: 250px;
             }
 
             .problemas {
+                @extend %list-gral;
                 background-image: url(../assets/iconos/question.png);
-                padding-left: 20px;
-                background-position: 0 0;
-                background-size: 16px;
-                background-repeat: no-repeat;
-                width: 250px;
             }
 
             .verif {
+                @extend %list-gral;
                 background-image: url(../assets/iconos/hand.png);
-                padding-left: 20px;
-                background-position: 0 0;
-                background-size: 16px;
-                background-repeat: no-repeat;
-                width: 250px;
             }
 
             .docu {
+                @extend %list-gral;
                 background-image: url(../assets/iconos/papeles.png);
-                padding-left: 20px;
-                background-position: 0 0;
-                background-size: 16px;
-                background-repeat: no-repeat;
-                width: 250px;
             }
 
-            .gear { 
+            .gear {
+                @extend %list-gral;
                 background-image: url(../assets/iconos/casco.png);
-                padding-left: 20px;
-                background-position: 0 0;
-                background-size: 16px;
-                background-repeat: no-repeat;
-                width: 250px;
             }
         }
     }

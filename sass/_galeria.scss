@@ -12,8 +12,6 @@
         min-height: 220px;
         min-width: 400px;
         border: 1px solid map-get($colors, greyBg);
-        // border-color: map-get($colors, orangeBg);
-        // border: solid 1px;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -49,9 +47,14 @@
 }
 
 @media only screen and (max-width: 768px) {
+
     .grid-gallery-container {
         display: flex;
         flex-direction: column;
+
+        .zoom:hover {
+            transform: none;
+        }
 
         .media {
             border-color: map-get($colors, orangeBg);
