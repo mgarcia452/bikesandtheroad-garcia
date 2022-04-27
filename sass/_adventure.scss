@@ -5,7 +5,6 @@
     width: 100%;
     grid-template-columns: 1fr 1fr;
     gap: $borderRadius;
-    margin: auto;
 
     .rodadas-list {
         display: flex;
@@ -14,28 +13,26 @@
         flex-grow: 1;
         overflow: hidden;
         align-items: center;
-        padding-top: 20px;
-        font-size: 40px;
-        font-weight: bold;
+        padding-top: 10%;
+        font-size: 16px;
         text-transform: uppercase;
+        text-align: center;
         background-color: map-get($colors, blueBg);
-        border: 2px solid map-get($colors, orangeBg);
+        border: 2px solid map-get($colors, greyBg);
+        border-radius: $borderRadius;
+        color: map-get($colors, whiteFont);
+        font-family: 'Fira Sans', sans-serif;
 
-        h3 {
+        a {
+            font-family: 'Fira Sans', sans-serif;
             color: map-get($colors, whiteFont);
-        }
-
-        li {
-            border: 2px map-get($colors, blackFont);
-            background-color: map-get($colors, greyBg);
+            padding: 5px;
             background-position: center;
-            border-radius: $borderRadius;
         }
 
         li :hover {
-            background-color: map-get($colors, redHover);
+            background-color: map-get($colors, orangeNav);
             transition: 0.2s;
-            font-family: 'Fira Sans', sans-serif;
             border-radius: $borderRadius;
         }
     }
@@ -47,16 +44,10 @@
         flex-direction: column;
         height: 480px;
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
         background-color: map-get($colors, greyBg);
         border-radius: $borderRadius;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .grid-main-adv {
-        display: flex;
-        flex-direction: column;
+        border: 2px solid map-get($colors, greyBg);
     }
 }
 
@@ -66,14 +57,39 @@
     display: flex;
     max-height: 495px;
     background-color: map-get($colors, blackFont);
-    gap: 12px;
-    padding: 2px;
+    gap: 2px;
     overflow-x: scroll;
-    border: 2px solid map-get($colors, orangeBg);
-    padding: $borderRadius;
+    border: 2px solid map-get($colors, greyBg);
 
     .iframe-item {
-        border: solid map-get($colors, blueBg);
         border-radius: $borderRadius;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-main-adv {
+        display: flex;
+        flex-direction: column;
+
+        .rodadas-list {
+            background-color: map-get($colors, orangeBg);
+            border-color: map-get($colors, blackFont);
+
+            a {
+                border: none;
+            }
+
+            a:hover {
+                background-color: map-get($colors, blackFont);
+            }
+        }
+
+        .ruta0 {
+            border-color: map-get($colors, orangeBg);
+        }
+    }
+
+    body .iframes-adv {
+        border-color: map-get($colors, orangeBg);
     }
 }

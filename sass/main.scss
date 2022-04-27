@@ -66,10 +66,11 @@
 /* main */
 
 main {
-    margin: 2% 10% 2% 10%;
     & #title-gral {
         @include titles()
     }
+
+    margin: 2% 10% 2% 10%;
 
     .media-index-container {
         display: grid;
@@ -92,7 +93,7 @@ main {
             overflow: hidden;
             align-items: center;
             border-radius: 10px;
-            border: 2px solid map-get($colors, greyBg);
+            border: 1px solid map-get($colors, greyBg);
             box-shadow: map-get($colors, orangeNav);
             padding: 20px;
             animation-duration: 5s;
@@ -106,11 +107,12 @@ main {
             flex-grow: 1;
             overflow: hidden;
             align-items: center;
-            font-family: 'Antonio', sans-serif;
+            font-family: 'Fira Sans', sans-serif;
+            color: map-get($colors, whiteFont);
             font-size: 16px;
-            color: map-get($colors, orangeBg);
+            padding: $borderRadius;
             background-color: map-get($colors, blueBg);
-            border: 2px solid map-get($colors, greyBg);
+            border: 1px solid map-get($colors, greyBg);
             border-radius: 10px;
             animation-duration: 5s;
             animation-name: slidetext;
@@ -163,10 +165,9 @@ main {
 }
 
 /* footer */
-
-#body-gral footer {
+footer {
     position: relative;
-    font-family: 'Antonio', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     text-align: center;
     right: 0;
     left: 0;

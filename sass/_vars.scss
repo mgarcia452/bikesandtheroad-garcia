@@ -1,5 +1,4 @@
-$colors: (
-    blueBg: rgba(23, 47, 63, 0.642),
+$colors: (blueBg: rgba(23, 47, 63, 0.642),
     orangeBg: rgba(235, 115, 3, 0.596),
     greyBg: rgba(237, 237, 237, 0.768),
     redHover: rgba(255, 0, 0, 0.658),
@@ -12,7 +11,14 @@ $marginstd: 2% 15% 2% 15%;
 $borderRadius: 10px;
 
 @mixin titles {
-    color: map-get($colors, orangeNav );
+    color: map-get($colors, orangeNav);
     text-align: center;
     text-transform: capitalize;
+}
+
+@mixin listita {
+    padding-left: 20px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 250px;
 }

@@ -1,133 +1,112 @@
 .grid-mant-container {
     display: grid;
-    overflow-wrap: nowrap;
     gap: 20px;
-    margin: auto;
-    width: 100%;
-    height: 100%;
 
     .mant-descrip {
         width: 300px;
         background-color: map-get($colors, blueBg);
-        align-items: center;
-        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        font-family: 'Antonio', sans-serif;
-        color: map-get($colors, whiteFont);
-        border-radius: 10px;
-        border: 1px solid;
-        border-color: map-get($colors, whiteFont);
-        margin: auto;
-    }
-
-
-    .mant-list li {
-        background-color: map-get($colors, blueBg);
         font-family: 'Fira Sans', sans-serif;
-        text-transform: capitalize;
+        color: map-get($colors, whiteFont);
+        border: 1px solid map-get($colors, greyBg);
+        padding: 10px;
+        text-align: center;
+        border-radius: $borderRadius;
         margin: auto;
     }
 
-    li :hover {
-        background-color: map-get($colors, orangeNav);
-        transition: 0.2s;
-        font-weight: bold;
+    .mant-list {
+        text-align: center;
+
+        ul {
+            display: inline-block;
+            border: 1px solid map-get($colors, greyBg);
+            background-color: map-get($colors, blueBg);
+            border-radius: $borderRadius;
+            text-transform: capitalize;
+
+            a {
+                color: map-get($colors, whiteFont);
+            }
+
+            li :hover {
+                background-color: map-get($colors, orangeNav);
+                transition: 0.2s;
+                font-weight: bold;
+            }
+
+            .repuestos {
+                background-image: url(../assets/iconos/cadena.png);
+                padding-left: 20px;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+
+            .accesorios {
+                background-image: url(../assets/iconos/exhaust.png);
+                padding-left: 20px;
+                background-position: 0 0;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+
+            .problemas {
+                background-image: url(../assets/iconos/question.png);
+                padding-left: 20px;
+                background-position: 0 0;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+
+            .verif {
+                background-image: url(../assets/iconos/hand.png);
+                padding-left: 20px;
+                background-position: 0 0;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+
+            .docu {
+                background-image: url(../assets/iconos/papeles.png);
+                padding-left: 20px;
+                background-position: 0 0;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+
+            .gear { 
+                background-image: url(../assets/iconos/casco.png);
+                padding-left: 20px;
+                background-position: 0 0;
+                background-size: 16px;
+                background-repeat: no-repeat;
+                width: 250px;
+            }
+        }
     }
 
-    .repuestos {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/cadena.png);
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .repuestos a {
-        color: map-get($colors, whiteFont);
-    }
-    
-    .accesorios {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/exhaust.png);
-        background-position: 0 0;
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .accesorios a {
-        color: map-get($colors, whiteFont);
-    }
-    
-    .problemas {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/question.png);
-        background-position: 0 0;
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .problemas a {
-        color: map-get($colors, whiteFont);
-    }
-    
-    .verif {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/hand.png);
-        background-position: 0 0;
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .verif a {
-        color: map-get($colors, whiteFont);
-    }
-    
-    .docu {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/papeles.png);
-        background-position: 0 0;
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .docu a {
-        color: map-get($colors, whiteFont);
-    }
-    
-    .gear {
-        padding-left: 20px;
-        list-style-type: none;
-        background-image: url(../assets/iconos/casco.png);
-        background-position: 0 0;
-        background-size: 16px;
-        background-repeat: no-repeat;
-        margin-left: 40%;
-        width: 250px;
-    }
-    
-    .gear a {
-        color: map-get($colors, whiteFont);
-    }
-}
-@media only screen and (max-width: 768px) {
-    .grid-mant-container {
-        display: flex;
-        flex-direction: column;
+    @media only screen and (max-width: 768px) {
+        .grid-mant-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mant-descrip {
+            color: map-get($colors, whiteFont);
+            border: 1px solid map-get($colors, blackFont);
+            background-color: map-get($colors, orangeBg);
+        }
+
+        .mant-list ul {
+            color: map-get($colors, whiteFont);
+            border: 1px solid map-get($colors, blackFont);
+            background-color: map-get($colors, orangeBg);
+        }
     }
 }

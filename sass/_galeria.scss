@@ -11,16 +11,17 @@
     & .media {
         min-height: 220px;
         min-width: 400px;
-        border: solid 1px;
-        border-color: map-get($colors, orangeBg);
+        border: 1px solid map-get($colors, greyBg);
+        // border-color: map-get($colors, orangeBg);
+        // border: solid 1px;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
 
         .text-gallery {
-            height: 100%;
             display: flex;
             align-items: flex-end;
+            margin-top: 2%;
 
             h3 {
                 font-size: 16px;
@@ -51,19 +52,6 @@
     .grid-gallery-container {
         display: flex;
         flex-direction: column;
-    }
-
-    .media {
-        border-color: map-get($colors, orangeBg);
-    }
-}
-
-.aside-gallery {
-    @media only screen and (max-width: 768px) {
-        .grid-gallery-container {
-            display: flex;
-            flex-direction: column;
-        }
 
         .media {
             border-color: map-get($colors, orangeBg);

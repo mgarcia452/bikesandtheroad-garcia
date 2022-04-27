@@ -2,36 +2,19 @@
     margin: $marginstd;
     background-color: map-get($colors, blueBg);
     border-radius: $borderRadius;
+    border: 1px solid map-get($colors, greyBg);
     color: map-get($colors, whiteFont);
     text-align: center;
 
     & .form {
-        color: map-get($colors, orangeNav);
-        font-family: 'Antonio', sans-serif;
-        font-weight: bold;
-        text-align: center;
+        color: map-get($colors, whiteFont);
+        font-family: 'Fira Sans', sans-serif;
         padding: $borderRadius;
 
         & ::placeholder {
-            color: map-get($colors, orangeBg);
+            color: map-get($colors, blueBg);
         }
     }
-
-    @media only screen and (max-width: 768px) {
-        .reg-cont {
-            color: map-get($colors, orangeBg);
-        }
-
-        .form-title {
-            color: map-get($colors, orangeBg);
-        }
-
-        .form {
-            font-family: 'Fira Sans', sans-serif;
-            color: map-get($colors, whiteFont);
-        }
-    }
-
     .submit-btn {
         width: 6.25rem;
         border: none;
@@ -42,5 +25,17 @@
 
     fieldset button:hover {
         color: map-get($colors, orangeNav);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-contact {
+        color: map-get($colors, whiteFont);
+        border: 2px solid map-get($colors, blackFont);
+        background-color: map-get($colors, orangeBg);
+        
+        #title-gral {
+            color: map-get($colors, whiteFont);
+        }
     }
 }
