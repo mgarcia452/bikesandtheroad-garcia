@@ -1,49 +1,120 @@
-.grid-main-adv {
+h3 {
+    text-align: center;
+    color: map-get($colors, whiteFont)
+}
+
+.gallery-adv {
     display: grid;
-    overflow-wrap: nowrap;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    gap: $borderRadius;
+    grid-template-columns: repeat(2, 1fr);
+}
 
-    .rodadas-list {
-        display: flex;
-        flex-direction: column;
-        flex-basis: auto;
-        flex-grow: 1;
-        overflow: hidden;
-        align-items: center;
-        padding-top: 10%;
-        font-size: 16px;
-        text-transform: uppercase;
-        text-align: center;
-        background-color: map-get($colors, blueBg);
-        border: 2px solid map-get($colors, greyBg);
-        border-radius: $borderRadius;
-        color: map-get($colors, whiteFont);
-        font-family: 'Fira Sans', sans-serif;
-
-        a {
-            font-family: 'Fira Sans', sans-serif;
-            color: map-get($colors, whiteFont);
-            padding: 5px;
-            background-position: center;
-        }
-
-        li :hover {
-            background-color: map-get($colors, orangeNav);
-            transition: 0.2s;
-            border-radius: $borderRadius;
-        }
+@media (max-width: 480px) {
+    .gallery-adv {
+        grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.gallery-adv .gallery-item {
+    position: relative;
+    height: calc((100vh - 400px)/2);
+}
+
+@media (max-width: 480px) {
+    .gallery-adv .galery-item {
+        height: calc((100vh - 60px)/4);
+    }
+}
+
+.gallery-adv .gallery-item a::before {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    padding: 10%;
+    background-color: map-get($colors, orangeBg);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0 10px 25px 0;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+@media (max-width: 768px) {
+    .gallery-adv .gallery-item a::before {
+        transform: scale(1);
+    }
+}
+
+.gallery-adv .gallery-item a:hover::before {
+    transform: scale(1);
+}
+
+.item-01 img {
+    border-radius: 15px 0 0 0;
+}
+
+.item-02 img {
+    border-radius: 0 15px 0 0;
+}
+
+.item-03 img {
+    border-radius: 0 0 0 15px;
+}
+
+.item-04 img {
+    border-radius: 0 0 15px 0;
+}
+
+.gallery-adv .gallery-item .item-01::before {
+    content: "asfalto";
+}
+
+.gallery-adv .gallery-item .item-02::before {
+    content: "trackday";
+}
+
+.gallery-adv .gallery-item .item-03::before {
+    content: "tierra";
+}
+
+.gallery-adv .gallery-item .item-04::before {
+    content: "urbana";
+}
+
+.gallery-adv .gallery-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 650px) {
+    .item-02 img {
+        border-radius: 0;
+    }
+
+    .item-03 img {
+        border-radius: 0;
+    }
+}
+
+.nav-sec {
+    display: grid;
 
     .ruta0 {
         display: flex;
+        align-items: center;
         flex-basis: auto;
         flex-grow: 1;
         flex-direction: column;
         height: 480px;
-        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
         overflow: hidden;
         background-color: map-get($colors, greyBg);
         border-radius: $borderRadius;
@@ -52,10 +123,10 @@
 }
 
 .iframes-adv {
+    display: flex;
     margin: 2% 5% 2% 5%;
     width: 90%;
-    display: flex;
-    max-height: 495px;
+    max-height: 480px;
     background-color: map-get($colors, blackFont);
     gap: 2px;
     overflow-x: scroll;

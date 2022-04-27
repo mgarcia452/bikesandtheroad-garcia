@@ -1,10 +1,15 @@
 .main-contact {
-    margin: $marginstd;
+    // margin: $marginstd;
     background-color: map-get($colors, blueBg);
     border-radius: $borderRadius;
     border: 1px solid map-get($colors, greyBg);
     color: map-get($colors, whiteFont);
     text-align: center;
+    min-height: 100vh;
+    max-width: 50%;
+    margin: auto;
+    display: grid;
+    // justify-content: center;
 
     & .form {
         color: map-get($colors, whiteFont);
@@ -33,6 +38,7 @@
         color: map-get($colors, whiteFont);
         border: 2px solid map-get($colors, blackFont);
         background-color: map-get($colors, orangeBg);
+        max-width: 80%;
         
         #title-gral {
             color: map-get($colors, whiteFont);

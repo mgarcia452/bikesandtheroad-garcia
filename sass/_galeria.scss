@@ -1,4 +1,4 @@
-.grid-gallery-container {
+.gallery-container {
     min-height: 100vh;
     width: 100%;
     margin: auto;
@@ -48,9 +48,8 @@
 
 @media only screen and (max-width: 768px) {
 
-    .grid-gallery-container {
-        display: flex;
-        flex-direction: column;
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
 
         .zoom:hover {
             transform: none;
@@ -58,6 +57,11 @@
 
         .media {
             border-color: map-get($colors, orangeBg);
+            min-width: 320px;
         }
+    }
+
+    aside {
+        min-width: 320px;
     }
 }
