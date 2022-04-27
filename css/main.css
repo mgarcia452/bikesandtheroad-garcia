@@ -270,7 +270,7 @@ h3 {
       grid-template-columns: repeat(2, 1fr);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   .gallery-adv {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
@@ -279,7 +279,7 @@ h3 {
 
 .gallery-adv .gallery-item {
   position: relative;
-  height: calc((100vh - 400px)/2);
+  height: calc((100vh - 60px)/2);
 }
 
 @media (max-width: 480px) {
@@ -426,31 +426,19 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  .grid-main-adv {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .grid-main-adv .rodadas-list {
-    background-color: rgba(235, 115, 3, 0.596);
-    border-color: black;
-  }
-  .grid-main-adv .rodadas-list a {
+  a {
     border: none;
   }
-  .grid-main-adv .rodadas-list a:hover {
+  a:hover {
     background-color: black;
   }
-  .grid-main-adv .ruta0 {
+  .ruta0 {
     border-color: rgba(235, 115, 3, 0.596);
   }
-  body .iframes-adv {
-    border-color: rgba(235, 115, 3, 0.596);
-  }
+}
+
+body .iframes-adv {
+  border-color: rgba(235, 115, 3, 0.596);
 }
 
 #body-gral {

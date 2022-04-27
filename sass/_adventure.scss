@@ -8,7 +8,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
     .gallery-adv {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -16,7 +16,7 @@ h3 {
 
 .gallery-adv .gallery-item {
     position: relative;
-    height: calc((100vh - 400px)/2);
+    height: calc((100vh - 60px)/2);
 }
 
 @media (max-width: 480px) {
@@ -138,29 +138,19 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-    .grid-main-adv {
-        display: flex;
-        flex-direction: column;
-
-        .rodadas-list {
-            background-color: map-get($colors, orangeBg);
-            border-color: map-get($colors, blackFont);
-
-            a {
-                border: none;
-            }
-
-            a:hover {
-                background-color: map-get($colors, blackFont);
-            }
-        }
-
-        .ruta0 {
-            border-color: map-get($colors, orangeBg);
-        }
+    a {
+        border: none;
     }
 
-    body .iframes-adv {
+    a:hover {
+        background-color: map-get($colors, blackFont);
+    }
+
+    .ruta0 {
         border-color: map-get($colors, orangeBg);
     }
+}
+
+body .iframes-adv {
+    border-color: map-get($colors, orangeBg);
 }
