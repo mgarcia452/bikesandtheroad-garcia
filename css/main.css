@@ -14,6 +14,12 @@ a:active {
   color: black;
 }
 
+#title-gral {
+  color: #eb7303;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 .main-contact {
   background-color: rgba(23, 47, 63, 0.642);
   border-radius: 10px;

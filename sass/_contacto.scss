@@ -1,5 +1,8 @@
+#title-gral{
+    @include titles()
+}
+
 .main-contact {
-    // margin: $marginstd;
     background-color: map-get($colors, blueBg);
     border-radius: $borderRadius;
     border: 1px solid map-get($colors, greyBg);
@@ -9,7 +12,7 @@
     max-width: 50%;
     margin: auto;
     display: grid;
-    // justify-content: center;
+
 
     & .form {
         color: map-get($colors, whiteFont);
@@ -20,6 +23,7 @@
             color: map-get($colors, blueBg);
         }
     }
+
     .submit-btn {
         width: 6.25rem;
         border: none;
@@ -40,7 +44,7 @@
         background-color: map-get($colors, orangeBg);
         max-width: 80%;
         min-width: 320px;
-        
+
         #title-gral {
             color: map-get($colors, whiteFont);
         }
