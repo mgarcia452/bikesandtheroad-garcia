@@ -524,6 +524,7 @@ h3 {
 /* main */
 main {
   margin: 2% 10% 2% 10%;
+  min-height: 100vh;
 }
 
 main #title-gral {
@@ -535,10 +536,10 @@ main #title-gral {
 main .media-index-container {
   display: -ms-grid;
   display: grid;
-  min-height: 100vh;
   width: 100%;
   gap: 10px;
   margin: auto;
+  padding-top: 10%;
 }
 
 main .media-index-container .image-index {

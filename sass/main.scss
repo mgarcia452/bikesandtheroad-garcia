@@ -71,13 +71,14 @@ main {
     }
 
     margin: 2% 10% 2% 10%;
+    min-height: 100vh;
 
     .media-index-container {
         display: grid;
-        min-height: 100vh;
         width: 100%;
         gap: 10px;
         margin: auto;
+        padding-top: 10%;
 
         & .image-index {
             height: 480px;
