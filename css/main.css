@@ -74,6 +74,7 @@ a:active {
     background-color: rgba(235, 115, 3, 0.596);
     max-width: 80%;
     min-width: 320px;
+    font-size: 80%;
   }
   .main-contact #title-gral {
     color: aliceblue;
@@ -676,6 +677,7 @@ footer {
   border-radius: 0px 0px 15px 15px;
   color: aliceblue;
   text-transform: uppercase;
+  min-width: 320px;
 }
 
 footer a svg {

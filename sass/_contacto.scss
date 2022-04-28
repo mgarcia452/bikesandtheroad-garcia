@@ -44,6 +44,7 @@
         background-color: map-get($colors, orangeBg);
         max-width: 80%;
         min-width: 320px;
+        font-size: 80%;
 
         #title-gral {
             color: map-get($colors, whiteFont);
