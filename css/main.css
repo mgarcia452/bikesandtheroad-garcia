@@ -157,8 +157,8 @@ a:active {
   }
 }
 
-.grid-mant-container {
-  min-height: 100vh;
+.mant-container {
+  height: 100vh;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -167,10 +167,9 @@ a:active {
           justify-content: center;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  gap: 3px;
 }
 
-.grid-mant-container .mant-descrip {
+.mant-container .mant-descrip {
   width: 300px;
   background-color: rgba(23, 47, 63, 0.642);
   display: -webkit-box;
@@ -183,17 +182,16 @@ a:active {
   font-family: 'Fira Sans', sans-serif;
   color: aliceblue;
   border: 1px solid rgba(237, 237, 237, 0.768);
-  padding: 10px;
   text-align: center;
   border-radius: 10px;
   margin: auto;
 }
 
-.grid-mant-container .mant-list {
+.mant-container .mant-list {
   text-align: center;
 }
 
-.grid-mant-container .mant-list ul {
+.mant-container .mant-list ul {
   display: inline-block;
   border: 1px solid rgba(237, 237, 237, 0.768);
   background-color: rgba(23, 47, 63, 0.642);
@@ -201,50 +199,49 @@ a:active {
   text-transform: capitalize;
 }
 
-.grid-mant-container .mant-list ul a {
+.mant-container .mant-list ul a {
   color: aliceblue;
 }
 
-.grid-mant-container .mant-list ul li :hover {
+.mant-container .mant-list ul li :hover {
   background-color: #eb7303;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-weight: bold;
 }
 
-.grid-mant-container .mant-list ul .repuestos, .grid-mant-container .mant-list ul .accesorios, .grid-mant-container .mant-list ul .problemas, .grid-mant-container .mant-list ul .verif, .grid-mant-container .mant-list ul .docu, .grid-mant-container .mant-list ul .gear {
-  padding-left: 20px;
+.mant-container .mant-list ul .repuestos, .mant-container .mant-list ul .accesorios, .mant-container .mant-list ul .problemas, .mant-container .mant-list ul .verif, .mant-container .mant-list ul .docu, .mant-container .mant-list ul .gear {
   background-size: 16px;
   background-repeat: no-repeat;
   width: 250px;
 }
 
-.grid-mant-container .mant-list ul .repuestos {
+.mant-container .mant-list ul .repuestos {
   background-image: url(../assets/iconos/cadena.png);
 }
 
-.grid-mant-container .mant-list ul .accesorios {
+.mant-container .mant-list ul .accesorios {
   background-image: url(../assets/iconos/exhaust.png);
 }
 
-.grid-mant-container .mant-list ul .problemas {
+.mant-container .mant-list ul .problemas {
   background-image: url(../assets/iconos/question.png);
 }
 
-.grid-mant-container .mant-list ul .verif {
+.mant-container .mant-list ul .verif {
   background-image: url(../assets/iconos/hand.png);
 }
 
-.grid-mant-container .mant-list ul .docu {
+.mant-container .mant-list ul .docu {
   background-image: url(../assets/iconos/papeles.png);
 }
 
-.grid-mant-container .mant-list ul .gear {
+.mant-container .mant-list ul .gear {
   background-image: url(../assets/iconos/casco.png);
 }
 
 @media only screen and (max-width: 768px) {
-  .grid-mant-container .grid-mant-container {
+  .mant-container .mant-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -253,16 +250,47 @@ a:active {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .grid-mant-container .mant-descrip {
+  .mant-container .mant-descrip {
     color: aliceblue;
     border: 1px solid black;
     background-color: rgba(235, 115, 3, 0.596);
   }
-  .grid-mant-container .mant-list ul {
+  .mant-container .mant-list ul {
     color: aliceblue;
     border: 1px solid black;
     background-color: rgba(235, 115, 3, 0.596);
   }
+}
+
+.tutorial {
+  display: -ms-grid;
+  display: grid;
+}
+
+.tutorial .morea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 480px;
+  width: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+  background-color: rgba(237, 237, 237, 0.768);
+  border-radius: 10px;
+  border: 2px solid rgba(237, 237, 237, 0.768);
 }
 
 h3 {
