@@ -293,6 +293,27 @@ a:active {
   border: 2px solid rgba(237, 237, 237, 0.768);
 }
 
+.iframes-mant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2% 5% 2% 5%;
+  width: 90%;
+  max-height: 480px;
+  background-color: black;
+  gap: 2px;
+  overflow-x: scroll;
+  border: 2px solid rgba(237, 237, 237, 0.768);
+}
+
+.iframes-mant .iframe-item-mant {
+  border-radius: 10px;
+}
+
+body .iframes-mant {
+  border-color: rgba(235, 115, 3, 0.596);
+}
+
 h3 {
   text-align: center;
   color: aliceblue;

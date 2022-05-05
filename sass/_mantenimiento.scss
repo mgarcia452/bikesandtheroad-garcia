@@ -118,3 +118,22 @@
         border: 2px solid map-get($colors, greyBg);
     }
 }
+
+.iframes-mant {
+    display: flex;
+    margin: 2% 5% 2% 5%;
+    width: 90%;
+    max-height: 480px;
+    background-color: map-get($colors, blackFont);
+    gap: 2px;
+    overflow-x: scroll;
+    border: 2px solid map-get($colors, greyBg);
+
+    .iframe-item-mant {
+        border-radius: $borderRadius;
+    }
+}
+
+body .iframes-mant {
+    border-color: map-get($colors, orangeBg);
+}
